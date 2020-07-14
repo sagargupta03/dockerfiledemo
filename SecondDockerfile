@@ -1,0 +1,4 @@
+FROM centos:latest
+MAINTAINER Sagar Gupta <sagar03.gupta@gmail.com>
+RUN useradd -ms /bin/bash SG1
+USER SG1

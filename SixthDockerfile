@@ -1,0 +1,5 @@
+FROM centos:latest
+MAINTAINER Sagar Gupta <sagar03.gupta@gmail.com>
+RUN useradd -ms /bin/bash SG1
+CMD "echo" "Show this when you create a container out of this image"
+USER SG1
