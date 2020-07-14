@@ -1,0 +1,15 @@
+FROM centos:latest
+
+MAINTAINER sagar03gupta@gmail.com
+
+# yum update to update the cache for repos
+RUN yum update -y
+
+# install apache and net-tools
+RUN yum install -y httpd net-tools
+ 
+RUN echo "This is a custom index file build during image creation" > /var/www/html/index.html
+
+EXPOSE 80
+
+ENTRYPOINT apachectl "-DFOREGROUND"
