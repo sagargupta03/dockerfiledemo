@@ -6,10 +6,8 @@ MAINTAINER sagar03gupta@gmail.com
 RUN yum update -y
 
 # install apache and net-tools
-RUN yum install -y httpd net-tools
- 
-RUN echo "This is a custom index file build during image creation" > /var/www/html/index.html
+RUN yum install -y httpd 
 
-EXPOSE 80
+CMD "Echo" "Just httpd install"
 
 ENTRYPOINT apachectl "-DFOREGROUND"
